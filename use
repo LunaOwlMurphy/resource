@@ -1,0 +1,7 @@
+解决错误Failed to get D-Bus connection: Operation not permiited（WSL+Centos7错误）  
+mv /usr/bin/systemctl /usr/bin/systemctl.old   #备份旧文件  
+cp systemctl /usr/bin/systemctl                #替换  
+chmod +x /usr/bin/systemctl                    #给执行权限  
+net stop LxssManager                           #停止LxssManager服务  
+net start LxssManager                          #启动LxssManager服务  
+文件来源地址：https://raw.githubusercontent.com/gdraheim/docker-systemctl-replacement/master/files/docker/systemctl.py
